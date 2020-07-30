@@ -127,9 +127,20 @@
                  3. checked属性，可以指定默认值
              * checkbox：复选框
                  1. 一般会给每一个单选框提供value属性，指定其被选中后提交的值
-                 2. checked属性，可以指定默认值 
+                 2. checked属性，可以指定默认值
+             * file: 文件选择框
+             * hidden: 隐藏域用于提交一些信息
+             * 按钮: 
+               * submit: 提交按钮, 可以提交表单
+               * button: 普通按钮
+               * image: 图片提交按钮
+                 * src属性指定图片的路径
+               * color
            * label标签：指定如书香的文字描述信息
              * 注意：
                * label的for属性一般会和input的id属性值对应。如果对应了，则点击label区域，会让input输入框获取焦点。
          * select：下拉列表
+           * 子元素: option, 指定列表项
          * textarea：文本域
+           * cols: 指定列数, 每一行有多少个字符
+           * rows: 多少行
