@@ -174,3 +174,57 @@
   1. 直接在html标签上, 指定事件的属性, 属性值为js代码
      1. onclick --单击事件
   2. 通过js获取元素对象, 指定事件属性, 设置一个函数
+## BOM:
+1. 概念：Browser Object Model浏览器对象模型
+   * 将浏览器的各个组成部分封装成对象。
+2. 组成：
+   * Window: 窗口对象
+   * Navigator: 浏览器对象
+   * Screen: 显示器屏幕对象
+   * History: 历史记录对象
+   * Location: 地址栏对象
+3. Window: 窗口对象
+   1. 创建
+   2. 方法
+      1. 与弹出框有关的方法：
+         1. alert() 显示待有一段消息和一个确认按钮的警告框
+         2. confirm() 显示带有一段消息以及确认按钮和取消按钮的对话框
+            * 如果用户点击确定按钮，则方法返回true
+            * 如果用户点击取消按钮，则方法返回false
+         3. prompt() 显示可提示用户输入的对话框
+            * 返回值是用户输入的值
+      2. 与打开关闭有关的方法
+         1. close() 关闭浏览器窗口
+         2. open() 打开一个新的浏览器窗口
+      3. 与定时器有关的方法
+         1. setTimeout() 在指定的毫秒数后调用函数或计算表达式
+         2. clearTimeout() 取消由setTimeout()方法设置的timeout
+         3. setIntervar() 按照指定的周期（以毫秒计）来调用函数或计算表达式
+         4. clearInterval() 取消由setInterval()设置的timeout
+   3. 属性
+      1. 获取其他BOM对象：History, Location, Navigator, Screen
+      2. 获取DOM对象: document
+   4. 特点
+      * Window对象不需要创建可以直接使用  window.方法名();
+      * Window引用可以省略 方法名();
+4. Location: 地址栏对象
+   1. 创建（获取）：
+      1. window.location
+      2. location
+   2. 方法
+      * reload() 重新加载当前窗口
+   3. 属性
+      * href 设置或返回完整的URL
+5. History: 历史记录对象
+   1. 创建（获取）：
+      1. window.history
+      2. history
+   2. 方法
+      * back() 加载history列表中的前一个URL
+      * forward() 加载history列表中的下一个URL
+      * go(参数) 加载history列表中的某个具体页面
+        * 参数：
+          * 正数：前进几个历史记录
+          * 负数：后退几个历史记录
+   3. 属性
+      * length 返回当前窗口历史列表中的URL书香

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+<img id="banner" src="resource/img/banner_1.jpg" width="100%">
+<script>
+    var banner = document.getElementById("banner");
+    flag = 1;
+    setInterval(func, 2000);
+
+    function func() {
+        if (flag === 1) {
+            banner.src = "resource/img/banner_2.jpg";
+            flag = 2;
+        } else if (flag === 2) {
+            banner.src = "resource/img/banner_3.jpg";
+            flag = 3;
+        } else {
+            banner.src = "resource/img/banner_1.jpg";
+            flag = 1;
+        }
+    }
+</script>
+</body>
+</html>

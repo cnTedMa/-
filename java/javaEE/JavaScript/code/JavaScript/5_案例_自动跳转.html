@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转</title>
+    <style>
+        p {
+            text-align: center;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p><span id="time">5</span>秒之后，自动跳转到首页...</p>
+<script>
+    var time = document.getElementById("time");
+    setInterval(func, 1000);
+    function func() {
+        time.innerText = time.innerText - 1;
+        if (time.innerText == 0) {
+            location.href = "http://www.baidu.com";
+            clearInterval();
+        }
+    }
+</script>
+</body>
+</html>
