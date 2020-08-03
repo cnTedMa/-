@@ -273,3 +273,49 @@
     * 属性
       * parentNode 返回节点的父节点
 * HTML DOM
+  1. 标签体的设置和获取: innerHTML
+  2. 使用html元素对象的属性
+  3. 控制样式样式
+     1. 使用元素的style属性来设置
+        ```JavaScript
+        div1.style.border = "1px solid red";
+        div1.style.width = "200px";
+        div1.style.fontSize = "20px";
+        ```
+     2. 提前定义好类选择器的样式, 通过元素的className属性来设置其其class属性值.
+## 事件
+* 概念: 某些组件被执行了某些操作后, 出发某些代码的执行.
+  * 事件: 某些操作, 如: 单击, 双击, 键盘按下了, 鼠标移动了
+  * 事件源: 组件, 如: 按钮, 文本输入框...
+  * 监听器: 代码
+  * 注册监听: 将事件, 事件源, 监听器结合在一起. 当事件源上发生了某个事件, 则触发执行某个监听器代码.
+* 常见的事件: 
+  1. 点击事件:
+     1. onclick: 单击事件
+     2. ondblclick: 双击事件
+  2. 焦点事件:
+     1. onblur: 失去焦点
+        * 一般用于表单校验
+     2. onfocus: 获得焦点
+  3. 加载事件:
+     1. onload: 一张页面或一幅图像完成加载
+  4. 鼠标事件:
+     1. onmousedown: 鼠标按钮被按下
+        * 定义方法时, 定义一个形参, 接收event对象.
+        * event对象的button属性可以获取被点击的鼠标按键.
+     2. onmouseup: 鼠标按键被松开
+     3. onmousemove: 鼠标被移动
+     4. onmouseover: 鼠标移到某元素之上
+     5. onmouseout: 鼠标从某元素移开
+  5. 键盘事件:
+     1. onkeydown: 某个键盘按键被按下
+     2. onkeyup: 某个键盘按键被松开
+     3. onkeypress: 某个键盘按键被按下并松开
+  6. 选中和改变:
+     1. onchange: 域的内容被改变
+     2. onselect: 文本被选中
+  7. 表单事件:
+     1. onsubmit: 确认按钮被点击
+        * 可以阻止表单的提交
+          * 方法返回false则表单被阻止提交
+     2. onreset: 重置按钮被点击
